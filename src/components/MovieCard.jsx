@@ -1,14 +1,18 @@
 import CardStyle from'./CardStyle.css';
 import React from "react";
+import {motion} from "framer-motion";
 
-
-const MovieCard =()=>{
+const MovieCard =({movie})=>{
     return (
-        <div className="card">
-            <h3 className="movieName">Name</h3>
-            <img className="MovieImage" src={"https://m.media-amazon.com/images/M/MV5BNzQ4MGYzYzAtNjJlOC00NTdkLTlmNTAtMmZjMzZmZTg2YTEzXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_QL75_UY414_CR0,0,280,414_.jpg"}/>
-
-        </div>
+        <motion.div
+            layout
+            animate={{opacity:1}}
+            initial={{opacity:0}}
+            exit={{opacity:0}}
+           className="card">
+            <h4 className="movieName">{movie.original_title}</h4>
+            <img className="MovieImage" src={"https://image.tmdb.org/t/p/w500"+movie.backdrop_path}/>
+        </motion.div>
     );
 };
 
