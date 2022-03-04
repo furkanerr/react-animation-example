@@ -1,0 +1,14 @@
+
+
+.MovieImage {
+    border-radius: 15px;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.movieName{
+    margin: 5px;
+    font-size: 0.8rem;
+}
+
